@@ -1,10 +1,10 @@
 class GuessResult:
-    def __init__(hits, blows):
-        self.hits = hits
-        self.blows = blows
+    def __init__(self, hits, blows):
+        self._hits = hits
+        self._blows = blows
 
-    def GetHits():
-        return self.hits
+    def GetHits(self):
+        return self._hits
 
-    def GetBlows():
-        return self.blows
+    def GetBlows(self):
+        return self._blows
