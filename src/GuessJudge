@@ -1,0 +1,28 @@
+class judge:
+    def __init__(self, answer, guess):
+        self.answer = answer
+        self.guess = guess
+
+    def judge(self, guess):
+        if guess == self.answer:
+            return "Correct"
+        elif len(guess) < len(self.answer):
+            return "Too few characters"
+        elif len(guess) > len(self.answer):
+            return "Too many characters"
+        hit = 0
+        blow = 0
+        index = 0
+        for a, g in zip(self.answer, guess):
+            if a == g:
+                hit += 1
+                #この場合guessからgを削除する、削除して配列がずれないようにnullを入れる
+                guess = guess[:index] + None + guess[index + 1:]
+            index += 1
+        for a in self.answer:
+            if a in guess:
+                blow += 1
+                #この場合guessからaを削除する、削除して配列がずれないようにnullを入れる
+                guess = guess.replace(a, None, 1)
+        
+        return hit, blow
