@@ -1,4 +1,4 @@
-@startuml
+@startuml HitAndBlowClassDiagram
 title Hit and Blow Word Game - Class Diagram
 
 skinparam classAttributeIconSize 0
