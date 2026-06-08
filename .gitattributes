@@ -1,58 +1,41 @@
 * text=auto eol=lf
 
-*.cs        text diff=csharp
-*.shader    text
-*.cginc     text
-*.compute   text
+# Python source
+*.py      text eol=lf diff=python
+*.pyi     text eol=lf diff=python
+*.pyw     text eol=lf diff=python
 
-*.unity     text
-*.prefab    text
-*.mat       text
-*.meta      text
-*.anim      text
-*.controller text
-*.asset     text
-*.guiskin   text
-*.mask      text
-*.playable  text
-*.overrideController text
-*.physicMaterial text
-*.physicsMaterial2D text
+# Project configuration
+*.toml    text eol=lf
+*.ini     text eol=lf
+*.cfg     text eol=lf
+*.yml     text eol=lf
+*.yaml    text eol=lf
+*.json    text eol=lf
 
-*.json      text
-*.xml       text
-*.txt       text
-*.md        text
+# Documentation and diagrams
+*.md      text eol=lf
+*.txt     text eol=lf
+*.puml    text eol=lf
+*.plantuml text eol=lf
 
-*.png       binary
-*.jpg       binary
-*.jpeg      binary
-*.gif       binary
-*.tga       binary
-*.psd       binary
-*.exr       binary
-*.hdr       binary
+# Scripts
+*.ps1     text eol=lf
+*.sh      text eol=lf
+*.bat     text eol=crlf
+*.cmd     text eol=crlf
 
-*.fbx       binary
-*.blend     binary
-*.mb        binary
-*.ma        binary
-*.max       binary
+# Images and generated diagram outputs
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.gif     binary
+*.svg     text eol=lf
+*.pdf     binary
 
-*.wav       binary
-*.mp3       binary
-*.ogg       binary
-*.aif       binary
-
-*.mp4       binary
-*.mov       binary
-*.avi       binary
-*.webm      binary
-
-*.zip       binary
-*.7z        binary
-*.rar       binary
-*.dll       binary
-*.so        binary
-*.dylib     binary
-*.exe       binary
+# Archives and packaged artifacts
+*.zip     binary
+*.7z      binary
+*.rar     binary
+*.tar     binary
+*.gz      binary

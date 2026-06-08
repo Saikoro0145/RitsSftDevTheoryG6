@@ -1,0 +1,50 @@
+@startuml HitAndBlowClassDiagram
+title Hit and Blow Word Game - Class Diagram
+
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+
+class GameCore {
+  -wordProvider: WordProvider
+  -judge: GuessJudge
+  -view: CliView
+  -answer: str
+  +Main(): void
+}
+
+class GuessJudge {
+  +Judge(answer: str, guess: str): GuessResult
+}
+
+class GuessResult {
+  -hits: int
+  -blows: int
+  +GetHits(): int
+  +GetBlows(): int
+}
+
+class WordProvider {
+  +GetAnswer(): str
+}
+
+Interface View {
+  +ShowStart(): void
+  +ReadGuess(): str
+  +ShowGuessResult(result: GuessResult): void
+  +ShowSuccess(): void
+  +ShowError(message: str): void
+}
+
+class CliView {}
+
+
+GameCore --> WordProvider
+GameCore --> GuessJudge
+GameCore --> CliView
+GameCore ..> GuessResult
+
+View <|.. CliView
+GuessJudge --> GuessResult
+CliView ..> GuessResult
+
+@enduml
