@@ -3,12 +3,10 @@ from GuessResult import GuessResult
 
 class GuessJudge:
     def judge(self, guess, answer):
-        if guess == answer:
-            return "Correct"
-        elif len(guess) < len(answer):
-            return "Too few characters"
+        if len(guess) < len(answer):
+            return GuessResult(-1, -1)
         elif len(guess) > len(answer):
-            return "Too many characters"
+            return GuessResult(-1, -1)
 
         answer = list(answer)
         guess = list(guess)
