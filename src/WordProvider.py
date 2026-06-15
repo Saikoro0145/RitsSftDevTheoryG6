@@ -1,6 +1,7 @@
 import pandas as pd
 import random
 
+
 class WordProvider:
     def GetAnswer(self):
         df = pd.read_excel("sampleohsystemdevelope.xlsx")
@@ -22,5 +23,5 @@ class WordProvider:
 
         # 小文字に変換
         answer = moziretsu.lower()
-        
+
         return answer
