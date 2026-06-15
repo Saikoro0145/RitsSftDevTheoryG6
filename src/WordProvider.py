@@ -4,7 +4,7 @@ import random
 
 class WordProvider:
     def GetAnswer(self):
-        df = pd.read_excel("sampleohsystemdevelope.xlsx")
+        df = pd.read_csv("answers.csv")
 
         row_count = len(df)
         col_count = len(df.columns)
