@@ -27,7 +27,7 @@ class WordProvider {
   +GetAnswer(): str
 }
 
-Interface View {
+class CliView {
   +ShowStart(): void
   +ReadGuess(): str
   +ShowGuessResult(result: GuessResult): void
@@ -35,15 +35,12 @@ Interface View {
   +ShowError(message: str): void
 }
 
-class CliView {}
-
 
 GameCore --> WordProvider
 GameCore --> GuessJudge
 GameCore --> CliView
 GameCore ..> GuessResult
 
-View <|.. CliView
 GuessJudge --> GuessResult
 CliView ..> GuessResult
 
