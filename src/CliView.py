@@ -1,6 +1,4 @@
-
 class CliView:
-
     def ShowStart(self):
         print("================================")
         print("      HIT & BLOW GAME")
