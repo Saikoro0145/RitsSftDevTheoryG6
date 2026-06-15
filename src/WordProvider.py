@@ -22,5 +22,5 @@ class WordProvider:
 
         # 小文字に変換
         answer = moziretsu.lower()
-
+        
         return answer
