@@ -26,6 +26,7 @@ class GameCore:
                 break
 
 
-if __name__ == "__main__":
+# ファイルを直接実行したとき専用のコードのためテストからは呼ばれない
+if __name__ == "__main__":  # pragma: no cover
     game = GameCore()
     game.play()
