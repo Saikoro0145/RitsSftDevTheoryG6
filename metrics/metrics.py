@@ -102,7 +102,9 @@ def main():
     for item in COMMANDS:
         title = item["title"]
         tools = item["tools"]
-        missing_for_command = [tool_name for tool_name in tools if tool_name in missing_tools]
+        missing_for_command = [
+            tool_name for tool_name in tools if tool_name in missing_tools
+        ]
 
         print_section(title)
 
